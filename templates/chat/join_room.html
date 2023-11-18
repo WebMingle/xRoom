@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add your head content here -->
+</head>
+<body>
+    <h1>Join a Room</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="room_id">Room ID:</label>
+        <input type="text" name="room_id" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        {% if form.errors %}
+            <p style="color: red;">{{ form.errors }}</p>
+        {% endif %}
+        <button type="submit">Join Room</button>
+    </form>
+</body>
+</html>
+
