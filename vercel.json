@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "securechat/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "securechat/wsgi.py"
+    }
+  ]
+}
